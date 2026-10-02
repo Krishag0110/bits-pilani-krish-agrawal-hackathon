@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1424" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>SignalScope | Financial risk intelligence</title>
+    <meta name="description" content="Trace financial news and social posts into explainable risk signals and synthetic portfolio stress results." />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#overview" aria-label="SignalScope home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>SignalScope</strong><small>RISK INTELLIGENCE</small></span>
+        </a>
+
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="nav-links">
+          <a class="nav-link active" href="#overview"><span class="nav-icon">◫</span> Overview</a>
+          <a class="nav-link" href="#signals"><span class="nav-icon">◉</span> Signal feed</a>
+          <a class="nav-link" href="#stress"><span class="nav-icon">⌁</span> Stress test</a>
+          <a class="nav-link" href="#portfolio"><span class="nav-icon">▤</span> Portfolio</a>
+          <a class="nav-link" href="#analyze"><span class="nav-icon">✳</span> Analyze text</a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="source-health">
+          <div class="source-health-heading"><span>LIVE SOURCES</span><span class="health-icon">●</span></div>
+          <div id="source-health-list" class="source-health-list" aria-live="polite">
+            <div class="health-row"><span class="health-dot idle"></span> News feed <span class="health-state">Ready</span></div>
+            <div class="health-row"><span class="health-dot idle"></span> Social posts <span class="health-state">Ready</span></div>
+          </div>
+          <p>Live requests need network access. Demo data is available at any time.</p>
+        </div>
+
+        <div class="sidebar-footer">
+          <span class="synthetic-dot"></span>
+          <span>Synthetic portfolio<br /><small>For demonstration</small></span>
+        </div>
+      </aside>
+
+      <main class="workspace" id="overview">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> PORTFOLIO MONITOR</div>
+            <h1>From market text to portfolio risk</h1>
+            <p>Explainable signals from news and social posts, connected to a live stress view.</p>
+          </div>
+          <div class="topbar-actions">
+            <div class="as-of">AS OF <strong id="as-of">—</strong></div>
+            <button class="button button-quiet" id="reset-demo" type="button" title="Restore the reproducible demo data">Reset demo</button>
+            <button class="button button-primary" id="refresh-live" type="button"><span class="button-symbol">↻</span> Refresh live feeds</button>
+          </div>
+        </header>
+
+        <section class="metric-grid" aria-label="Portfolio summary">
+          <article class="metric-card">
+            <div class="metric-label">PORTFOLIO VALUE <span>01</span></div>
+            <div class="metric-value" id="metric-value">—</div>
+            <div class="metric-detail">Current synthetic book value</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">LATEST STRESS LOSS <span>02</span></div>
+            <div class="metric-value metric-loss" id="metric-loss">—</div>
+            <div class="metric-detail" id="metric-loss-detail">Waiting for a scenario</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">HIGH-IMPACT SIGNALS <span>03</span></div>
+            <div class="metric-value" id="metric-alerts">—</div>
+            <div class="metric-detail">Impact score above 7 / 10</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">INGESTED SIGNALS <span>04</span></div>
+            <div class="metric-value" id="metric-signals">—</div>
+            <div class="metric-detail" id="metric-source-split">News + social posts</div>
+          </article>
+        </section>
+
+        <div class="section-heading" id="stress">
+          <div><span class="section-number">01 / 04</span><h2>Signal to scenario</h2></div>
+          <span class="section-caption">Select any signal below to inspect its impact</span>
+        </div>
+
+        <section class="feature-grid" aria-label="Selected signal and stress result">
+          <article class="panel signal-focus">
+            <div class="panel-topline"><span class="panel-kicker">SELECTED RISK SIGNAL</span><span id="focus-source" class="source-tag">—</span></div>
+            <div class="focus-meta"><span id="focus-provenance" class="provenance-tag">—</span><span id="focus-time">—</span></div>
+            <h3 id="focus-title">Loading risk signals…</h3>
+            <p class="focus-text" id="focus-text">The engine is loading the reproducible demo feed.</p>
+            <div class="signal-attributes">
+              <div class="attribute"><span>SENTIMENT</span><strong id="focus-sentiment">—</strong><small id="focus-sentiment-label">—</small></div>
+              <div class="attribute"><span>EVENT CLASS</span><strong id="focus-event">—</strong><small id="focus-entity">—</small></div>
+              <div class="attribute impact-attribute"><span>IMPACT ESTIMATE</span><strong id="focus-impact">—</strong><small>Scale of 1 to 10</small></div>
+            </div>
+            <div class="evidence-block">
+              <div class="evidence-label">WHY THIS SIGNAL</div>
+              <p id="focus-explanation">—</p>
+              <div id="focus-evidence" class="evidence-chips"></div>
+            </div>
+            <div class="focus-footer"><a id="focus-link" href="#signals" target="_blank" rel="noopener noreferrer" hidden>Open source ↗</a><span id="focus-model-note">Impact is a heuristic estimate</span></div>
+          </article>
+
+          <article class="panel scenario-panel">
+            <div class="panel-topline"><span class="panel-kicker">PORTFOLIO STRESS</span><span id="scenario-status" class="scenario-status">—</span></div>
+            <div class="scenario-hero">
+              <div class="risk-dial" id="risk-dial"><div><span id="dial-impact">—</span><small>IMPACT / 10</small></div></div>
+              <div class="scenario-headline"><span>SIMULATED LOSS</span><strong id="scenario-loss">—</strong><p id="scenario-name">Select a signal to view its scenario.</p></div>
+            </div>
+            <div class="comparison">
+              <div class="compare-label"><span>Before stress</span><strong id="before-value">—</strong></div>
+              <div class="compare-track"><div class="compare-fill before"></div></div>
+              <div class="compare-label"><span>After stress</span><strong id="after-value">—</strong></div>
+              <div class="compare-track"><div id="after-bar" class="compare-fill after"></div></div>
+            </div>
+            <div class="scenario-rule"></div>
+            <div class="scenario-shocks"><div class="tiny-label">APPLIED SHOCKS</div><div id="shock-chips" class="shock-chips"><span>—</span></div></div>
+            <button class="button button-outline scenario-button" id="run-stress" type="button">Run stress test <span>↗</span></button>
+          </article>
+        </section>
+
+        <div class="section-heading" id="signals">
+          <div><span class="section-number">02 / 04</span><h2>Incoming signals</h2></div>
+          <div class="filter-tabs" role="group" aria-label="Filter signals">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="news" type="button">News</button>
+            <button class="filter" data-filter="social" type="button">Social</button>
+          </div>
+        </div>
+
+        <section class="insight-grid">
+          <article class="panel feed-panel">
+            <div class="feed-header"><span>EVENT STREAM</span><span id="feed-count">—</span></div>
+            <div id="signal-list" class="signal-list" aria-live="polite"><div class="loading-row">Loading signals…</div></div>
+          </article>
+          <article class="panel impact-panel">
+            <div class="feed-header"><span>LOSS BY ASSET TYPE</span><span id="impact-period">SELECTED SCENARIO</span></div>
+            <div id="asset-impact" class="asset-impact"><div class="empty-state">Select a stressed signal to see loss attribution.</div></div>
+            <div class="impact-note">Derivatives may offset losses when their hedge exposure benefits from the shock.</div>
+          </article>
+        </section>
+
+        <div class="section-heading" id="portfolio">
+          <div><span class="section-number">03 / 04</span><h2>Synthetic portfolio</h2></div>
+          <span class="section-caption">Illustrative wholesale banking exposures · USD millions</span>
+        </div>
+        <section class="panel portfolio-panel">
+          <div class="portfolio-topline"><div><span class="panel-kicker">POSITION LEVEL IMPACT</span><p>Loans, bonds, and derivatives under the selected scenario</p></div><span id="portfolio-count">— positions</span></div>
+          <div class="table-wrap"><table><thead><tr><th>Position</th><th>Type</th><th>Sector</th><th class="numeric">Base value</th><th class="numeric">Stressed value</th><th class="numeric">P&amp;L</th></tr></thead><tbody id="portfolio-body"><tr><td colspan="6" class="loading-row">Loading portfolio…</td></tr></tbody></table></div>
+        </section>
+
+        <div class="section-heading" id="analyze">
+          <div><span class="section-number">04 / 04</span><h2>Analyze text</h2></div>
+          <span class="section-caption">Paste a headline or social post to generate a new signal</span>
+        </div>
+        <section class="panel analyze-panel">
+          <form id="analyze-form">
+            <div class="analyze-fields">
+              <div class="input-group text-input-group"><label for="input-text">TEXT TO ANALYZE</label><textarea id="input-text" name="text" rows="4" minlength="12" maxlength="4000" placeholder="Example: Aster Manufacturing misses an interest payment as credit spreads widen…" required></textarea></div>
+              <div class="input-side"><div class="input-group"><label for="input-entity">COMPANY OR EVENT <span>OPTIONAL</span></label><input id="input-entity" name="entity" maxlength="120" placeholder="e.g. Aster Manufacturing" /></div><fieldset class="source-choice"><legend>SOURCE TYPE</legend><label><input type="radio" name="source" value="news" checked /><span>News article</span></label><label><input type="radio" name="source" value="social" /><span>Social post</span></label></fieldset><button class="button button-primary analyze-button" type="submit">Generate signal <span>↗</span></button></div>
+            </div>
+          </form>
+          <div class="example-row"><span>TRY AN EXAMPLE</span><button type="button" class="example" data-example="credit">Credit downgrade</button><button type="button" class="example" data-example="macro">Rate shock</button><button type="button" class="example" data-example="product">Product launch</button></div>
+        </section>
+
+        <footer class="main-footer"><span>SignalScope · Synthetic portfolio demonstration</span><span>Risk scores and stress results are illustrative estimates.</span></footer>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

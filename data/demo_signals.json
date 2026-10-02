@@ -1,0 +1,9 @@
+[
+  {"source":"news","title":"SIMULATED: Meridian Utilities agrees to acquire a regional grid operator","text":"In a fictional scenario, Meridian Utilities announces an acquisition and expects the merger to expand its network.","entity":"Meridian Utilities","minutes_ago":58},
+  {"source":"social","title":"SIMULATED: Northstar Energy product launch","text":"Fictional market post: Northstar Energy launches a new storage product and reports strong early customer demand.","entity":"Northstar Energy","minutes_ago":47},
+  {"source":"news","title":"SIMULATED: Harbor Bank receives a credit rating upgrade","text":"In this fictional scenario, a rating agency upgrades Harbor Bank after profit growth and stronger capital buffers.","entity":"Harbor Bank","minutes_ago":39},
+  {"source":"social","title":"SIMULATED: Cedar Logistics systems outage","text":"Fictional market post: a cyberattack causes an outage and disrupts Cedar Logistics shipments.","entity":"Cedar Logistics","minutes_ago":31},
+  {"source":"news","title":"SIMULATED: Inflation surge prompts emergency central bank rate hike","text":"In this fictional macroeconomic scenario, inflation accelerates and the central bank raises interest rates by 3.5% to contain prices.","entity":"Global market","minutes_ago":23},
+  {"source":"social","title":"SIMULATED: Sanctions disrupt Port Solis exports","text":"Fictional market post: sweeping sanctions and a trade embargo disrupt energy exports from Port Solis.","entity":"Port Solis","minutes_ago":15},
+  {"source":"news","title":"SIMULATED: Aster Manufacturing misses bond coupon and warns of default","text":"In this fictional credit event, Aster Manufacturing misses an interest payment, faces a credit rating downgrade, and begins debt restructuring with lenders.","entity":"Aster Manufacturing","minutes_ago":5}
+]
