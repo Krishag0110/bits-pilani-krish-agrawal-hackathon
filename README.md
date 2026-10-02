@@ -3,7 +3,7 @@
 **Candidate Name:** Krish Agrawal  
 **College Email ID:** f20230956@pilani.bits-pilani.ac.in  
 **College / Campus:** BITS Pilani, Pilani Campus  
-**Public Repository:** TODO — publish this repository as `bits-pilani-krish-agrawal-hackathon` and insert its public URL.  
+**Public Repository:** [bits-pilani-krish-agrawal-hackathon](https://github.com/Krishag0110/bits-pilani-krish-agrawal-hackathon)  
 **Demo Video Link:** TODO — upload the recorded walkthrough to YouTube as *Unlisted*, insert its URL, and verify it opens in a private browser window.  
 **Slide Deck:** [Presentation PDF](docs/presentation.pdf)
 
@@ -34,7 +34,7 @@ The local API includes `GET /api/health`, `GET /api/state`, `POST /api/analyze`,
 **Runtime:** Python 3.9 or newer. No third-party Python package is required for the backend.
 
 ```bash
-git clone <PUBLIC_REPOSITORY_URL>
+git clone https://github.com/Krishag0110/bits-pilani-krish-agrawal-hackathon.git
 cd bits-pilani-krish-agrawal-hackathon
 python3 -m src.server
 ```
@@ -77,6 +77,5 @@ This approach could help an analyst prioritize new reports, inspect why a text i
 
 ## Submission links to complete
 
-- Publish a **public** GitHub repository with this code under the required naming convention, then replace `<PUBLIC_REPOSITORY_URL>` and the repository placeholder above.
 - Add an **Unlisted YouTube** recording link above and verify it plays without login. The submission guide requests a separate recorded walkthrough; the live demonstration in the problem brief is capped at five minutes.
 - Check that [docs/presentation.pdf](docs/presentation.pdf) is present and viewable in the public repository before submitting.
