@@ -4,7 +4,7 @@
 **College Email ID:** f20230956@pilani.bits-pilani.ac.in  
 **College / Campus:** BITS Pilani, Pilani Campus  
 **Public Repository:** [bits-pilani-krish-agrawal-hackathon](https://github.com/Krishag0110/bits-pilani-krish-agrawal-hackathon)  
-**Demo Video Link:** TODO — upload the recorded walkthrough to YouTube as *Unlisted*, insert its URL, and verify it opens in a private browser window.  
+**Demo Video Link:** TODO — follow the [ten-minute recorded walkthrough plan](docs/recorded-walkthrough.md), upload it to YouTube as *Unlisted*, insert its URL, and verify it opens in a private browser window.<br>
 **Slide Deck:** [Presentation PDF](docs/presentation.pdf)
 
 ## 1. Project Overview / Problem Statement & Approach
@@ -78,4 +78,3 @@ This approach could help an analyst prioritize new reports, inspect why a text i
 ## Submission links to complete
 
 - Add an **Unlisted YouTube** recording link above and verify it plays without login. The submission guide requests a separate recorded walkthrough; the live demonstration in the problem brief is capped at five minutes.
-- Check that [docs/presentation.pdf](docs/presentation.pdf) is present and viewable in the public repository before submitting.
