@@ -37,6 +37,7 @@ coverage/
 .cache/
 .chart-data-*/
 tmp/
+submission-materials/
 
 # OS and editors
 .DS_Store

@@ -4,7 +4,7 @@
 **College Email ID:** f20230956@pilani.bits-pilani.ac.in  
 **College / Campus:** BITS Pilani, Pilani Campus  
 **Public Repository:** [bits-pilani-krish-agrawal-hackathon](https://github.com/Krishag0110/bits-pilani-krish-agrawal-hackathon)  
-**Demo Video Link:** TODO — use the [two-minute application demo script](docs/recorded-walkthrough.md), upload the recording to YouTube as *Unlisted*, insert its URL, and verify it opens in a private browser window.<br>
+**Demo Video:** [Two-minute application walkthrough](docs/demo/signalscope-demo-2min.mp4)<br>
 **Slide Deck:** [Presentation PDF](docs/presentation.pdf)
 
 ## 1. Project Overview / Problem Statement & Approach
@@ -56,9 +56,9 @@ python3 -m unittest discover -s tests -v
 
 The dashboard supports a deterministic replay, on-demand live refresh, manual text analysis, and stress testing. Impact scores above 7 automatically run a scenario; any signal can also be stressed manually. Live feeds need internet access; failure of either source is reported independently and does not prevent the replay demonstration. To start with an immediate live fetch and refresh at five-minute intervals, use `SIGNALSCOPE_AUTO_REFRESH_SECONDS=300 python3 -m src.server` (the interval must be at least 60 seconds).
 
-**Live connectivity status (2 October 2026):** A current-code `POST /api/refresh` run against a fresh temporary database with `limit: 6` added **11 real signals**: six Google News RSS headlines and five Bluesky posts after relevance filtering. GDELT timed out during the TLS connection, so the news source reported **Fallback** (`degraded`) with the timeout warning; the social source reported **OK** (`ok`). Public feed availability and item counts vary; recheck **Refresh live feeds** from the presentation machine before the final pitch.
+**Live connectivity status (2 October 2026):** A `POST /api/refresh` run against a fresh temporary database with `limit: 6` added **11 real signals**: six Google News RSS headlines and five Bluesky posts after relevance filtering. GDELT timed out during the TLS connection, so the news source reported **Fallback** (`degraded`) with the timeout warning; the social source reported **OK** (`ok`). Public feed availability and item counts vary.
 
-**Verification:** With localhost sockets permitted, `python3 -m unittest discover -s tests -v` reported `Ran 26 tests ... OK`. The default shell sandbox reported `Ran 24 tests ... OK (skipped=1)` because `APITests.setUpClass` could not bind localhost; its two test methods were not counted. The 11-signal refresh exercised live ingestion and source-status reporting through the local API. These point-in-time checks do not establish future feed uptime or predictive accuracy.
+**Verification:** All 26 automated tests passed, covering text processing, signal ranges, stress calculations, and HTTP routes. The 11-signal refresh exercised live ingestion and source-status reporting through the local API. These checks do not establish future feed uptime or predictive accuracy.
 
 ## 5. Key Results & Domain Impact
 
@@ -71,10 +71,6 @@ A fresh-database integration run and a browser run of the **fictional Aster Manu
 | Seeded replay | Credit Event; sentiment `-0.990`; impact `10/10` | `$797.00m` | `$739.04m` | `$57.96m` (`7.27%`) |
 | Dashboard **Credit downgrade** input | Credit Event; sentiment `-0.937`; impact `10/10` | `$797.00m` | `$739.04m` | `$57.96m` (`7.27%`) |
 
-The event-specific scenario applied rates `+20 bp`, broad credit spreads `+55 bp`, Industrials spreads `+140 bp`, an Aster issuer haircut of `25%`, equities `-6%`, and FX `-2%`. Rounded position contributions were loans `-$43.74m`, bonds `-$12.52m`, and derivatives `-$1.70m`. These are **simulated losses on fictional positions**, not observed returns or a calibrated back-test. [The five-minute live demo script](docs/demo-script.md) gives the review sequence.
+The event-specific scenario applied rates `+20 bp`, broad credit spreads `+55 bp`, Industrials spreads `+140 bp`, an Aster issuer haircut of `25%`, equities `-6%`, and FX `-2%`. Rounded position contributions were loans `-$43.74m`, bonds `-$12.52m`, and derivatives `-$1.70m`. These are **simulated losses on fictional positions**, not observed returns or a calibrated back-test.
 
 This approach could help an analyst prioritize new reports, inspect why a text item was flagged, and ask how a defined event shock would affect exposed positions. SignalScope is a hackathon prototype: its scores are heuristic, its training examples are curated, and its synthetic stress book does not establish predictive performance or a deployable risk limit. See the [model card](docs/model-card.md) for limitations.
-
-## Submission links to complete
-
-- Add an **Unlisted YouTube** recording link above and verify it plays without login. The submission guide requests a separate recorded walkthrough; the live demonstration in the problem brief is capped at five minutes.

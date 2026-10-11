@@ -1,0 +1,101 @@
+1
+00:00:00,795 --> 00:00:05,873
+Signal Scope turns financial news and social
+posts into traceable risk signals
+
+2
+00:00:06,096 --> 00:00:11,392
+then applies them to a synthetic wholesale
+portfolio I have reset the application
+
+3
+00:00:11,392 --> 00:00:15,053
+to a labelled replay so this result is easy to
+reproduce
+
+4
+00:00:20,495 --> 00:00:26,315
+The feed contains news and social examples Live
+refresh pulls G-delt headlines
+
+5
+00:00:26,616 --> 00:00:32,866
+with Google News RSS as a fallback and public
+Bluesky posts Each signal includes
+
+6
+00:00:32,866 --> 00:00:36,092
+its source sentiment event type and impact
+
+7
+00:00:40,495 --> 00:00:45,489
+I will use the Credit downgrade example This
+fictional Aster Manufacturing
+
+8
+00:00:45,523 --> 00:00:50,612
+item says it missed a bond interest payment The
+engine classifies it as a
+
+9
+00:00:50,623 --> 00:00:55,802
+Credit Event with sentiment about minus zero
+point nine four and impact ten
+
+10
+00:00:55,835 --> 00:01:00,646
+out of ten The original text and explanation
+stay visible for review
+
+11
+00:01:05,495 --> 00:01:11,114
+Impact above seven automatically runs Module B
+It applies a defined adverse
+
+12
+00:01:11,159 --> 00:01:16,572
+scenario to twelve synthetic loans bonds and
+derivatives You can see rate
+
+13
+00:01:16,706 --> 00:01:23,000
+spread equity and FX shocks plus an Aster issuer
+haircut The book moves from
+
+14
+00:01:23,000 --> 00:01:27,175
+seven hundred ninety-seven million dollars to
+seven hundred thirty-nine point
+
+15
+00:01:27,175 --> 00:01:31,773
+zero four million a simulated loss of fifty-
+seven point nine six million
+
+16
+00:01:32,108 --> 00:01:37,219
+or seven point two seven percent The asset
+breakdown shows where that loss
+
+17
+00:01:37,219 --> 00:01:37,643
+sits
+
+18
+00:01:40,495 --> 00:01:46,159
+This is a transparent what-if for triage not a
+market forecast Analysts can
+
+19
+00:01:46,226 --> 00:01:51,817
+inspect the source risk signal and portfolio
+effect in one place The book
+
+20
+00:01:51,896 --> 00:01:56,538
+and shocks are illustrative and would need
+validation against approved real
+
+21
+00:01:56,538 --> 00:01:58,302
+data before operational use

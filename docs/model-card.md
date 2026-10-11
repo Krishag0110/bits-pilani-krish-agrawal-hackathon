@@ -60,7 +60,7 @@ These are simple, local mark-to-market approximations. They omit nonlinear deriv
 
 ## Evaluation status
 
-The repository test suite checks deterministic text processing, signal ranges, stress arithmetic, and HTTP routes. With localhost sockets permitted, it reported `Ran 26 tests ... OK`. The default shell sandbox reported `Ran 24 tests ... OK (skipped=1)` because `APITests.setUpClass` could not bind localhost; its two methods were not counted. These tests do not establish real-world predictive validity. Numerical examples in the presentation and README come from tested runs on the bundled synthetic portfolio, with the input, signal, scenario, and units shown together.
+All 26 tests in the repository test suite passed. They check deterministic text processing, signal ranges, stress arithmetic, and HTTP routes. These tests do not establish real-world predictive validity. Numerical examples in the presentation and README come from tested runs on the bundled synthetic portfolio, with the input, signal, scenario, and units shown together.
 
 ## Data and reproducibility
 
