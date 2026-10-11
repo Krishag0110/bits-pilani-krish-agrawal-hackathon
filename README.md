@@ -4,7 +4,7 @@
 **College Email ID:** f20230956@pilani.bits-pilani.ac.in  
 **College / Campus:** BITS Pilani, Pilani Campus  
 **Public Repository:** [bits-pilani-krish-agrawal-hackathon](https://github.com/Krishag0110/bits-pilani-krish-agrawal-hackathon)  
-**Demo Video Link:** TODO — follow the [ten-minute recorded walkthrough plan](docs/recorded-walkthrough.md), upload it to YouTube as *Unlisted*, insert its URL, and verify it opens in a private browser window.<br>
+**Demo Video Link:** TODO — use the [two-minute application demo script](docs/recorded-walkthrough.md), upload the recording to YouTube as *Unlisted*, insert its URL, and verify it opens in a private browser window.<br>
 **Slide Deck:** [Presentation PDF](docs/presentation.pdf)
 
 ## 1. Project Overview / Problem Statement & Approach

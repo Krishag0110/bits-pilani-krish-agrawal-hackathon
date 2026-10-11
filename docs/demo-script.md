@@ -28,6 +28,6 @@ The exact **Credit downgrade** quick example was tested as a manual news input: 
 - **How is the stress value calculated?** Loans and bonds use first-order rate and spread duration approximations; derivatives use signed equity, rate, and FX sensitivities. Shocks are event-specific and scaled by `impact / 10`.
 - **How would you validate this?** Label a held-out set of multi-source events, measure entity/event/sentiment quality, and back-test or calibrate shocks against a real approved portfolio and historical outcomes.
 
-## Recorded walkthrough TODO
+## Short application recording
 
-The attached submission guidelines request a separate **10-minute screen recording** hosted as an Unlisted YouTube video. Record startup from the README commands, ingestion, one risk signal, the stress result, and the limitations; then put the verified public-viewable link in `README.md`.
+For a concise application recording, use the [two-minute word-for-word script](recorded-walkthrough.md). The attached submission guidelines separately list a recorded YouTube walkthrough; check the required length before final submission, then put the verified Unlisted link in `README.md`.
