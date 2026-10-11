@@ -4,7 +4,8 @@
 **College Email ID:** f20230956@pilani.bits-pilani.ac.in  
 **College / Campus:** BITS Pilani, Pilani Campus  
 **Public Repository:** [bits-pilani-krish-agrawal-hackathon](https://github.com/Krishag0110/bits-pilani-krish-agrawal-hackathon)  
-**Demo Video:** [Two-minute application walkthrough](docs/demo/signalscope-demo-2min.mp4)<br>
+**Demo Video (YouTube):** [https://youtu.be/1McL5bOnrSk](https://youtu.be/1McL5bOnrSk)<br>
+**Video Download:** [Two-minute application walkthrough (MP4)](docs/demo/signalscope-demo-2min.mp4)<br>
 **Slide Deck:** [Presentation PDF](docs/presentation.pdf)
 
 ## 1. Project Overview / Problem Statement & Approach
